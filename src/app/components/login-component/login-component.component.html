@@ -1,0 +1,32 @@
+<div class="container">
+    <mat-card class="card-container">
+        <form [formGroup]="loginForm" class="card">
+            <div class="header">Please Log in</div>
+            <mat-form-field>
+                <input mat-input matNativeControl
+                    type="text" 
+                    id="username" 
+                    placeholder="username" 
+                    autocomplete="off" 
+                    formControlName="username" 
+                    required />
+            </mat-form-field>
+        
+            <mat-form-field>
+                <input mat-input matNativeControl
+                type="password" 
+                id="password" 
+                placeholder="Password" 
+                autocomplete="off" 
+                formControlName="password" 
+                required/>
+            </mat-form-field>
+        
+            <div class="actions">
+                <button mat-button color="primary" type="submit" (click)="login()">Login</button>
+            
+              </div>
+        </form>
+    </mat-card>
+</div>
+

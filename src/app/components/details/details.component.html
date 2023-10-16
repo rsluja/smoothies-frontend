@@ -1,0 +1,61 @@
+<mat-card class="mat-card-container">
+    <mat-card-content class="form-content">
+        <mat-card-content class="basic-details">
+            <p>BasicDetails:</p>
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput [(ngModel)]="this.data.name"  type="text" placeholder="name" [disabled]="this.isDisabled">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Description</mat-label>
+                <textarea matInput placeholder="Description" [(ngModel)]="this.data.description" [disabled]="this.isDisabled"></textarea>
+            </mat-form-field>
+        </mat-card-content>  
+        <mat-card-content class="nutrition-details">  
+                <h3 class="nutrition-header">Nutritions: </h3>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Calories</mat-label>
+                        <input matInput [(ngModel)]="this.data.nutritions.kcal"  type="text" placeholder="name" [disabled]="this.isDisabled">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Fat</mat-label>
+                        <input matInput [(ngModel)]="this.data.nutritions.fat"  type="text" placeholder="name" [disabled]="this.isDisabled">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Saturates</mat-label>
+                        <input matInput [(ngModel)]="this.data.nutritions.saturates"  type="text" placeholder="name" [disabled]="this.isDisabled">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Carbs</mat-label>
+                        <input matInput [(ngModel)]="this.data.nutritions.carbs"  type="text" placeholder="name" [disabled]="this.isDisabled">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Sugars</mat-label>
+                        <input matInput [(ngModel)]="this.data.nutritions.sugars"  type="text" placeholder="name" [disabled]="this.isDisabled">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Fibre</mat-label>
+                        <input matInput [(ngModel)]="this.data.nutritions.fibre"  type="text" placeholder="name" [disabled]="this.isDisabled">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Protein</mat-label>
+                        <input matInput [(ngModel)]="this.data.nutritions.protein"  type="text" placeholder="name" [disabled]="this.isDisabled">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Salt</mat-label>
+                        <input matInput [(ngModel)]="this.data.nutritions.salt"  type="text" placeholder="name" [disabled]="this.isDisabled">
+                    </mat-form-field>
+        </mat-card-content>
+            <div class="actions">
+                <button mat-icon-button color="primary" type="submit" (click)="onSubmit(data,detailsForm, this.data.id)" [disabled]="this.isDisabled">
+                    <mat-icon>save</mat-icon>
+                </button>
+                <button mat-icon-button color="primary" (click)="delete(this.data.id)" [disabled]="this.isDisabled">
+                    <mat-icon>delete</mat-icon>
+                </button>
+                <button mat-icon-button color="primary" (click)="cancel()" [disabled]="false">
+                    <mat-icon>cancel</mat-icon>
+                </button>
+            </div>
+    </mat-card-content>
+</mat-card>

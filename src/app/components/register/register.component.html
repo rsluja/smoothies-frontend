@@ -1,0 +1,41 @@
+<div class="container">
+    <mat-card class="card-container">
+        <form [formGroup]="registerForm" class="card" *ngIf="!isSignedUp">
+            <div class="header">Please Sign Up</div>
+            <mat-form-field>
+                <input mat-input matNativeControl
+                    type="text" 
+                    id="username" 
+                    placeholder="username" 
+                    autocomplete="off" 
+                    formControlName="username" 
+                    required />
+            </mat-form-field>
+
+            <mat-form-field>
+                <input mat-input matNativeControl
+                    type="email" 
+                    id="email" 
+                    placeholder="email" 
+                    autocomplete="off" 
+                    formControlName="email" 
+                    required />
+            </mat-form-field>
+        
+            <mat-form-field>
+                <input mat-input matNativeControl
+                type="password" 
+                id="password" 
+                placeholder="Password" 
+                autocomplete="off" 
+                formControlName="password" 
+                required/>
+            </mat-form-field>
+            <div class="actions">
+                <button mat-button color="primary" type="submit" (click)="register()">Sign up</button>
+            </div>
+        </form>
+
+        <div *ngIf="isSignedUp"> Registration successfull. Please log in</div>
+    </mat-card>
+</div>
